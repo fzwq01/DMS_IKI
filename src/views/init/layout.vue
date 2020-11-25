@@ -1,9 +1,7 @@
 <template>
     <div class="init-layout">
         <div class="logo">
-
         </div>
-
         <div class="bgContainer"></div>
         <div class="main-content">
             <div class="slogan">
@@ -11,6 +9,8 @@
             </div>
             <router-view></router-view>
         </div>
+
+        <div>我是devlopA修改的内容</div>
     </div>
 </template>
 
