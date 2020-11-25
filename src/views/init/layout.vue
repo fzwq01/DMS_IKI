@@ -13,7 +13,7 @@
         </div>
 
 
-        <div>这是B改变的内容</div>
+        <div>这是B改变的内容IIXIXIXIXIXI</div>
     </div>
 </template>
 
