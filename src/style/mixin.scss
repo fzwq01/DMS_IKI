@@ -1,0 +1,81 @@
+@mixin btn-color($width,$height,$shadow,$font,$color1,$color2,$color3,$color4,$color5,$color6) {
+    width: $width;
+    height: $height;
+    background: $color1; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,$color1, $color2); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, $color1, $color2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:$font;
+    font-size: 14px;
+    cursor: pointer;
+    border: 0 solid $color1;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 0 $shadow;
+
+    &:hover, &:focus {
+        background: -webkit-linear-gradient(to right,$color3, $color4); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, $color3, $color4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        outline: none;
+        border: 0 solid $color3;
+    }
+
+    &:active {
+        background: -webkit-linear-gradient(to right, $color5, $color6); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, $color5, $color6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        outline: none;
+    }
+}
+
+@mixin btnColor($width,$height,$bgColor,$borderColor,$fontColor,$hoverColor,$activeColor,$hoverFontColor,$hoverBorderColor) {
+    width: $width;
+    height: $height;
+    background: $bgColor;
+    color: $fontColor;
+    cursor: pointer;
+    border: 1px solid $borderColor;
+    border-radius: 5px;
+    font-size: 14px;
+
+    &:hover, &:focus {
+        background: $hoverColor;
+        outline: none;
+        color:$hoverFontColor;
+        border-color:$hoverBorderColor
+    }
+
+    &:active {
+        background: $activeColor;
+        outline: none;
+        color:$fontColor;
+        border-color:$borderColor
+    }
+}
+
+@mixin state ($color) {
+    &::before{
+        content:'';
+        width:10px;
+        height:10px;
+        border-radius: 5px;
+        background-color: $color;
+        position: absolute;
+        left:36px;
+        top:50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+@mixin rowColor ($width, $height, $bgColor, $color) {
+    width:$width;
+    height: $height;
+    background: $bgColor !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: $color;
+    box-sizing: border-box;
+    img{
+        vertical-align: middle;
+    }
+}

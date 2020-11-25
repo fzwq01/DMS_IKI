@@ -3,9 +3,291 @@ Write your variables here. All available variables can be
 found in element-ui/packages/theme-chalk/src/common/var.scss.
 For example, to overwrite the theme color:
 */
-$--color-primary: teal;
+$--color-primary: #0089ff;
+$green-color:#09e0a6;
 
 /* icon font path, required */
 $--font-path: '~element-ui/lib/theme-chalk/fonts';
 
 @import "~element-ui/packages/theme-chalk/src/index";
+
+//导入按钮
+.importBtn {
+    @include btn-color(90px,30px,#bbe2d8,#fff,#3cd3ad,#1dd8d1,#4edbbe,#35ded4,#29c79f, #17cbbe)
+}
+
+//登录按钮
+.loginBtn{
+    @include btn-color(100%,50px,#c2dcf9,#fff,#0089ff,#10ccff,#18a8ff,#1acdff,#1585ff, #09b3ff);
+    border-radius: 25px;
+    font-size: 18px;
+}
+
+//亮蓝色渐变按钮
+.lightBlueBtn {
+    @include btn-color(120px,34px,#c2dcf9,#fff,#0089ff,#10ccff,#18a8ff,#1acdff,#1585ff, #09b3ff)
+}
+
+//深蓝色无渐变按钮
+.darkBlueBtn {
+    @include btnColor(120px,34px,#0089ff,#0089ff,#ffffff,#009eff,#0071ff,#fff,#009eff)
+}
+
+//亮绿色渐变按钮
+.lightGreenBtn {
+    @include btn-color(120px,34px,#bbe2d8,#fff,#3cd3ad,#1dd8d1,#4edbbe,#35ded4,#29c79f, #17cbbe)
+}
+
+//白色无渐变 默认按钮
+.defaultBtn { 
+    @include btnColor(90px,34px,#ffffff,#dddddd,#333,#ffffff,#ffffff,#0088ff,#0088ff)
+}
+
+//授权按钮
+.authBtn {
+    @include btn-color(120px,34px,#c2dcf9,#fff,#0089ff,#10ccff,#18a8ff,#1acdff,#1585ff, #09b3ff);
+    padding-left: 36px;
+    padding-right:14px;
+    position: relative;
+    img{
+        position: absolute;
+        left:10px;
+        top:50%;
+        transform: translate(0,-50%);
+    }
+}
+
+//添加管理员按钮
+.addBtn {
+    @include btn-color(120px,34px,#bbe2d8,#fff,#3cd3ad,#1dd8d1,#4edbbe,#35ded4,#29c79f, #17cbbe);
+    padding-left: 36px;
+    padding-right:14px;
+    position: relative;
+    img{
+        position: absolute;
+        left:10px;
+        top:50%;
+        transform: translate(0,-50%);
+    }
+}
+
+//确认按钮
+.trueBtn {
+    @include btnColor(120px,34px,#0089ff,#0089ff,#ffffff,#009eff,#0071ff,#fff,#0088ff)
+}
+//确取消按钮
+.cancelBtn {
+    @include btnColor(90px,34px,#ffffff,#dddddd,#333,#ffffff,#eeeeee,#0088ff,#0088ff)
+}
+
+//绿色状态
+.greenState{
+    @include state ($green-color)
+}
+
+//红色状态
+.redState{
+    @include state (#ec273f)
+}
+
+//input输入框去掉圆角
+.el-input__inner {
+  border-radius: 0;
+}
+.el-input--prefix .el-input__inner{
+    padding-left: 40px;
+}
+//radio颜色更改
+.el-radio__input.is-checked .el-radio__inner {
+  border-color: #3cd3ad;
+  background: #3cd3ad;
+}
+
+//修改提示消息的样式
+//成功消息
+.el-message .el-icon-success {
+  color: #fff
+}
+
+.el-message--success {
+  background-color: #6bca6b;
+  border-color: #6bca6b;
+
+  .el-message__content {
+    color: #fff
+  }
+}
+
+//失败消息
+.el-message .el-icon-error {
+  color: #fff
+}
+
+.el-message--error {
+  background-color: #f24f5a;
+  border-color: #f24f5a;
+
+  .el-message__content {
+    color: #fff
+  }
+}
+
+//input输入框样式修改
+.el-input__inner {
+  height: 35px;
+  line-height: 35px;
+}
+
+.el-form-item__label {
+  height: 35px;
+  line-height: 35px;
+}
+
+.el-form-item__content {
+  height: 35px;
+  line-height: 35px;
+}
+
+//IP地址输入框样式修改
+.v-easy-input--box {
+  border-radius: 0;
+}
+
+.input .inspection {
+  margin: 0 0;
+  height: 20px;
+  line-height: 20px;
+}
+
+.input-ip ul {
+  box-sizing: border-box;
+  min-height: 34px;
+  height: 34px;
+  line-height: 34px;
+}
+
+.input-ip ul li {
+  height: 34px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+}
+.input-ip ul li span{
+    display: inline-block;
+    height:17px;
+    line-height: 12px;
+}
+
+//初始化  网络设置 设置label为蓝色
+
+.networkConfigContainer {
+  .el-form-item__label {
+    color: #1b8cf2;
+  }
+}
+
+.el-icon-arrow-down:before{
+    content: "";
+    display: none;
+}
+
+
+//表单验证时边框
+.el-form-item.is-error .el-input__inner{
+    border-color:#0199ff !important;
+}
+
+//登录页面的表单
+#formContainer{
+    .el-form-item{
+        margin:90px 0;
+    }
+    .el-input__inner,.el-form-item__content,.el-form-item__label{
+        height:50px;
+        line-height:50px;
+        font-size: 14px;
+    }
+    .el-form-item__label{
+        padding:0 10px 0 0;
+    }
+}
+
+//必填
+.el-form-item.is-required:not(.is-no-asterisk) > .el-form-item__label:before{
+    content: '';
+}
+
+//成功、失败
+#stateDialog{
+    .el-dialog__body{
+        text-align: center;
+    }
+}
+
+//UKey列表
+#container{
+    .el-input__inner{
+        text-align: center;
+    }
+}
+
+//恢复
+#areaContainer{
+    .el-form-item__label{
+        padding:0 20px 0 0;
+    }
+    .el-form-item{
+        margin-bottom: 45px;
+    }
+}
+
+//修改PIN码
+.modifyContainer{
+    .el-form-item{
+        margin-bottom: 30px;
+    }
+}
+
+//网络边框
+#networkContainer{
+    .v-easy-input--box{
+        border-color:#d5eafe
+    }
+    .el-form-item__label{
+        padding:0 8px 0 0;
+    }
+}
+
+#tableContainer{
+    .el-button--text{
+        &:hover{
+            text-decoration: underline;
+        }
+        &:active{
+            color:#2b79cc;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.el-input__inner {
+    &::placeholder {
+        color: #a7b4bd;
+    }
+    &::-webkit-input-placeholder {
+        color: #a7b4bd;
+    }
+    &:-moz-placeholder {
+        color: #a7b4bd !important;
+        opacity: 1;
+    }
+    &::-moz-placeholder {
+        color: #a7b4bd !important;
+        opacity: 1;
+    }
+    &:-ms-input-placeholder {
+        color: #a7b4bd;
+        font-family: 'Microsoft YaHei';
+    }
+}

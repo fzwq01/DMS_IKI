@@ -1,0 +1,219 @@
+$theme-color:#008AFF;
+$headBorder-color:#37a6f8;
+$hover-color:#f3f8fc;
+$active-color:#eaeff5; //点击背景色
+$rowBorder-color:#eaf2fd;
+$nav-color:rgb(122, 140, 155);
+$frame-color:#E9EEF2;
+// 首页
+.clears{
+    clear: both;
+}
+
+.nav-bar{
+    .el-menu{
+        border:none;
+    }
+}
+
+.example1{
+    display: block !important;
+}
+.example2{
+    display: none !important;
+}
+.is-activing{
+    color:$theme-color;
+}
+.is-null{
+    color:$nav-color;
+}
+
+
+// 按钮样式叠加修改
+.lightBlueBtn2,
+.lightGreenBtn2{
+    width: 120px;
+    margin-bottom: 24px;
+    margin: 0px 24px;
+    text-align: center;
+    line-height: 34px;
+}
+.lightGreenBtn2{margin-left: 0;}
+// 导航
+.is-actived {
+    color: $theme-color !important;
+    padding-left: 44px !important;
+    border-left: 4px solid $theme-color !important;
+    background: #E6F3FF;
+
+    &::before{
+        content:'';
+        position: absolute;
+        top: 22px;
+        left: 84px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background:$theme-color;
+        border:1px solid $theme-color;
+    }
+}
+
+.radius{
+    position: relative;
+    padding-left: 44px !important;
+    border-left: 4px solid transparent;
+
+    &:hover{
+        border-left: 4px solid $theme-color;
+        color:$theme-color !important;
+    }
+    &:hover:before{
+        background: $theme-color;
+        border:1px solid $theme-color;
+    }
+}
+.ip_style{
+    position: relative;
+    left: -20px;
+}
+.radius2{
+    padding-left: 70px !important;
+}
+.radius3{
+    padding-left: 60px !important;
+}
+.radius::before{
+    content:'';
+    position: absolute;
+    top: 22px;
+    left: 84px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border:1px solid #333;
+}
+.el-submenu__title:hover span,
+.el-submenu__title:focus span,
+.el-submenu__title:active span{
+    color: $theme-color;
+}
+
+.equip-title{
+    color:$nav-color;
+}
+
+//设备自检 设备启停
+.equipSelf{
+    width: 100%;
+    text-align: center;
+    min-height: 600px;
+    display: table;
+    .center-img{
+        cursor: pointer;
+        display: table-cell;
+        vertical-align: middle;
+        .imgs{
+            position: relative;
+            display: inline-block;
+            width: 280px;
+            height: 350px;
+        }
+        .search{
+            position: absolute;
+            top: 90px;
+            left: 68px;
+        }
+        .search-text{
+            position: absolute;
+            bottom: 46px;
+            left: 90px;
+            font-size: 24px;
+            color: #fff;
+        }
+    }
+}
+
+// 红文本
+.tip-text{
+    margin-left:15px;
+    color:red;
+    font-size: 14px;
+}
+
+//表格
+.el-table{
+    color:#333;
+    thead{
+        tr{
+            th{
+                background-color: $theme-color;
+                color:#fff;
+                padding:8px 0;
+
+                .cell{
+                    border-right:2px solid $headBorder-color;
+                    padding-left:30px;
+                }
+
+                &:nth-last-of-type(2){
+                    .cell{
+                        border-right:none;
+                    }
+                }
+            }
+        }
+    }
+    tbody{
+        tr{
+            td{
+                border-bottom:1px solid $rowBorder-color;
+                padding:8px 0;
+            }
+            // &:last-of-type{
+            //     background-color: $row-color;
+            // }
+        }
+    }
+    .cell{
+        padding-left:30px;
+        line-height:43px;
+    }
+    .more{
+        padding-left:20px
+    }
+}
+.el-table--enable-row-hover .el-table__body tr:hover > td{
+    background-color: $hover-color;
+}
+
+//弹框
+#dialogContaniner{
+    .el-dialog{
+        border-radius: 5px;
+    }
+    .el-dialog__header{
+        height:50px;
+        line-height: 50px;
+        border-bottom: 1px solid #ddd;
+        padding:0 0 0 25px;
+        text-align: left;
+    }
+    .el-form-item__label{
+        padding:0 10px 0 0;
+    }
+
+    .el-dialog__headerbtn .el-dialog__close{
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+//文字按钮
+.el-button--mini{
+    padding:1px 10px 1px 0px;
+}
+.el-button--text{
+    font-size: 14px;
+}
