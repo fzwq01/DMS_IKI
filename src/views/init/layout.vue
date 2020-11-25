@@ -10,7 +10,7 @@
             <router-view></router-view>
         </div>
 
-        <div>我是devlopA修改的内容</div>
+        <div>我是devlopA修改的内容嘻嘻为嘻嘻嘻嘻嘻</div>
     </div>
 </template>
 
