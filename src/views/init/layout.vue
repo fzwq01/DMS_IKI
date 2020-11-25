@@ -11,6 +11,9 @@
             </div>
             <router-view></router-view>
         </div>
+
+
+        <div>这是B改变的内容</div>
     </div>
 </template>
 
